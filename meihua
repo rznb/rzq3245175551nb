@@ -1,0 +1,143 @@
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local library = loadstring(game:HttpGet("https://pastefy.app/ud7GghOq/raw", true))()
+local devv = require(ReplicatedStorage.devv)
+local item = devv.load("v3item")
+
+local window = library:new("rz")
+
+local beautyTab = window:Tab("美化")
+local beautySection = beautyTab:section("皮肤美化", true)
+
+local skinsec = ""
+beautySection:Dropdown("选择皮肤", "SkinSelect", {
+    "烟火", "虚空", "纯金", "暗物质", "反物质", "神秘", "虚空神秘", "战术", "纯金战术", 
+    "白未来", "黑未来", "圣诞未来", "礼物包装", "猩红", "收割者", "虚空收割者", "圣诞玩具",
+    "荒地", "隐形", "像素", "钻石像素", "黄金零下", "绿水晶", "生物", "樱花", "精英", 
+    "黑樱花", "彩虹激光", "蓝水晶", "紫水晶", "红水晶", "零下", "虚空射线", "冰冻钻石",
+    "虚空梦魇", "金雪", "爱国者", "MM2", "声望", "酷化", "蒸汽", "海盗", "玫瑰", "黑玫瑰",
+    "激光", "烟花", "诅咒背瓜", "大炮", "财富", "黄金大炮", "四叶草", "自由", "黑曜石", "赛博朋克"
+}, function(value)
+    if value == "烟火" then
+        skinsec = "Sparkler"
+    elseif value == "虚空" then
+        skinsec = "Void"
+    elseif value == "纯金" then
+        skinsec = "Solid Gold"
+    elseif value == "暗物质" then
+        skinsec = "Dark Matter"
+    elseif value == "反物质" then
+        skinsec = "Anti Matter"
+    elseif value == "神秘" then
+        skinsec = "Hystic"
+    elseif value == "虚空神秘" then
+        skinsec = "Void Mystic"
+    elseif value == "战术" then
+        skinsec = "Tactical"
+    elseif value == "纯金战术" then
+        skinsec = "Solid Gold Tactical"
+    elseif value == "白未来" then
+        skinsec = "Future White"
+    elseif value == "黑未来" then
+        skinsec = "Future Black"
+    elseif value == "圣诞未来" then
+        skinsec = "Christmas Future"
+    elseif value == "礼物包装" then
+        skinsec = "Gift Wrapped"
+    elseif value == "猩红" then
+        skinsec = "Crimson Blood"
+    elseif value == "收割者" then
+        skinsec = "Reaper"
+    elseif value == "虚空收割者" then
+        skinsec = "Void Reaper"
+    elseif value == "圣诞玩具" then
+        skinsec = "Christmas Toy"
+    elseif value == "荒地" then
+        skinsec = "Wasteland"
+    elseif value == "隐形" then
+        skinsec = "Invisible"
+    elseif value == "像素" then
+        skinsec = "Pixel"
+    elseif value == "钻石像素" then
+        skinsec = "Diamond Pixel"
+    elseif value == "黄金零下" then
+        skinsec = "Frozen-Gold"
+    elseif value == "绿水晶" then
+        skinsec = "Atomic Nature"
+    elseif value == "生物" then
+        skinsec = "Biohazard"
+    elseif value == "樱花" then
+        skinsec = "Sakura"
+    elseif value == "精英" then
+        skinsec = "Elite"
+    elseif value == "黑樱花" then
+        skinsec = "Death Blossom-Gold"
+    elseif value == "彩虹激光" then
+        skinsec = "Rainbowlaser"
+    elseif value == "蓝水晶" then
+        skinsec = "Atomic Water"
+    elseif value == "紫水晶" then
+        skinsec = "Atomic Amethyst"
+    elseif value == "红水晶" then
+        skinsec = "Atomic Flame"
+    elseif value == "零下" then
+        skinsec = "Sub-Zero"
+    elseif value == "虚空射线" then
+        skinsec = "Void-Ray"
+    elseif value == "冰冻钻石" then
+        skinsec = "Frozen Diamond"
+    elseif value == "虚空梦魇" then
+        skinsec = "Void Nightmare"
+    elseif value == "金雪" then
+        skinsec = "Golden Snow"
+    elseif value == "爱国者" then
+        skinsec = "Patriot"
+    elseif value == "MM2" then
+        skinsec = "MM2 Barrett"
+    elseif value == "声望" then
+        skinsec = "Prestige Barnett"
+    elseif value == "酷化" then
+        skinsec = "Skin Walter"
+    elseif value == "蒸汽" then
+        skinsec = "Steampunk"
+    elseif value == "海盗" then
+        skinsec = "Pirate"
+    elseif value == "玫瑰" then
+        skinsec = "Rose"
+    elseif value == "黑玫瑰" then
+        skinsec = "Black Rose"
+    elseif value == "激光" then
+        skinsec = "Hyperlaser"
+    elseif value == "烟花" then
+        skinsec = "Firework"
+    elseif value == "诅咒背瓜" then
+        skinsec = "Cursed Pumpkin"
+    elseif value == "大炮" then
+        skinsec = "Cannon"
+    elseif value == "财富" then
+        skinsec = "Firework"
+    elseif value == "黄金大炮" then
+        skinsec = "Gold Cannon"
+    elseif value == "四叶草" then
+        skinsec = "Lucky Clover"
+    elseif value == "自由" then
+        skinsec = "Freedom"
+    elseif value == "黑曜石" then
+        skinsec = "Obsidian"
+    elseif value == "赛博朋克" then
+        skinsec = "Cyberpunk"
+    end
+end)
+
+beautySection:Toggle("开启皮肤美化", "EnableBeauty", false, function(state)
+    if state then
+        local inventory = item.inventory
+        local items = inventory.items
+        for _, item in ipairs(items) do
+            if item.type == "Gun" then
+                inventory.skinUpdate(item.name, skinsec)
+            end
+        end
+    end
+end)
